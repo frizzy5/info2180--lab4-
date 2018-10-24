@@ -1,7 +1,8 @@
  var tracker= true;
  var count=1;
 
-
+//Exercise 1: Single boundary turns red 
+//*************************************************************************************************************
 function boun(){
 	var top= document.getElementById("boundary1");
 	if (top.addEventListener){
@@ -12,6 +13,13 @@ function boun(){
  
  function wall(){
  	document.getElementById("boundary1").setAttribute("style", "background-color: #ff8888;");
+//********************************************************************************************************************
+
+
+
+
+//Exercise 2: All boundaries glow red on hover 
+//*****************************************************************************************************************
 
  }
  function wall2(){
@@ -26,9 +34,7 @@ function boun(){
  	}
   }
 }
-
  
-
  function allBoun(){
  	var cr= document.querySelectorAll('.boundary');
  	for(var x= 0; x<cr.length; x++){
@@ -36,6 +42,13 @@ function boun(){
  		
  }
 }
+//*****************************************************************************************************************
+
+
+
+
+//Exercise 3: Alerts on successful completion of maze 
+//*****************************************************************************************************************
 function al(){
  		var win=document.getElementById("end");
  		if(tracker== true){
@@ -52,7 +65,13 @@ function al(){
  		var win=document.getElementById("end");
  		win.addEventListener('mouseover',al);
  	}
- 		
+ //*****************************************************************************************************************
+
+
+
+
+//Exercise 4: Restartable maze 
+//***************************************************************************************************************** 		
  	function start(){
  		var s=document.getElementById('start');
  		if(tracker== false|| tracker== true){
@@ -70,12 +89,19 @@ function al(){
 
  		}
  	}
- 	function startEvent(){
+ 
+  	function startEvent(){
  		var st=document.getElementById('start');
  		var sy=st.addEventListener('click',start);
- 		
- 	}
 
+ 	}
+ //*****************************************************************************************************************
+
+
+
+
+//Exercise 6: Disallow cheating 
+ //*****************************************************************************************************************
  	function leave(){
  		document.getElementById("status").innerHTML = 'You lose Cheater';
  		var cr= document.querySelectorAll('.boundary');
@@ -83,17 +109,17 @@ function al(){
  				cr[x].setAttribute("style", "background-color: #ff8888;");
  				
  			}
- 			wall2();
-
-
+ 			//wall2();
  	}
 
  	function cheatEevent(){
  		var lev=document.getElementById("maze");
  		lev.addEventListener('mouseleave',leave);
-
-
  	}
+ //*****************************************************************************************************************
+
+
+
 
 function main(){
 	if(count==1){
