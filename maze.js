@@ -82,7 +82,7 @@ function al(){
  		for(var x= 0; x<cr.length-1; x++){
  				cr[x].setAttribute("style", "background-color: #ff8888;");
  			}
- 		wall2();
+ 		//wall2();
 
 
  	}
